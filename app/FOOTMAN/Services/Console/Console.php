@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Services\Console;
+namespace App\Footman\Services\Console;
 
 class Console
 {

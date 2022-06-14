@@ -1,6 +1,8 @@
 <?php
 
-namespace App\Services\Console;
+namespace App\Footman\Services\Console;
+
+use App\FOOTMAN\Services\Localization\Localization;
 
 class Commands
 {
@@ -50,7 +52,7 @@ class $fileName extends Controller
 
     public static function makeModel($fileName)
     {
-        $className = __DIR__ . "/../../Models/$fileName.php";
+        $className = __DIR__ . "/../../../Models/$fileName.php";
         if(file_exists($className)) {
             echo static::messageAlready();
             die();
@@ -64,16 +66,17 @@ class $fileName extends Controller
 
     public static function makeController($fileName)
     {
-        $className = __DIR__ . "/../../Http/Controllers/$fileName.php";
+        $className = __DIR__ . "/../../../Http/Controllers/$fileName.php";
+
         if(file_exists($className)) {
-            echo static::messageAlready();
+            static::messageAlready();
             die();
         }
         $file = fopen($className, "w");
         $fileContent = static::fileMaker($fileName, "controller");
         fwrite($file, $fileContent);
         fclose($file);
-        echo static::messageSuccess();
+        static::messageSuccess();
     }
 
     public static function fileMaker($fileName, $maker) {
@@ -90,11 +93,11 @@ class $fileName extends Controller
 
     private static function messageSuccess()
     {
-        echo 'this file successfully created';
+        return new Localization('global-success');
     }
 
     private static function messageAlready()
     {
-        echo 'این فایل از قبل وجود دارد';
+        return new Localization('global-already');
     }
 }

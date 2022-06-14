@@ -1,6 +1,6 @@
 <?php
 
-use App\Services\App;
+use App\FOOTMAN\Services\App;
 use App\Http\Controllers\HomeController;
 
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . "/../");

@@ -28,6 +28,7 @@ return [
   "global-add" => "افزودن",
   "global-alert" => "هشدار",
   "global-alert.defaultMessage" => "آیا مطمئن هستید؟",
+  "global-already" => "این فایل از قبل وجود دارد",
   "global-all" => "همه",
   "global-cancel" => "انصراف",
   "global-confirm" => "تایید",
@@ -67,6 +68,7 @@ return [
   "global-show" => "نمایش",
   "global-startTime" => "زمان شروع",
   "global-stopTime" => "زمان پایان",
+  "global-success" => "با موفقیت انجام شد",
   "global-submit" => "ثبت",
   "global-sunday" => "یکشنبه",
   "global-thursday" => "پنجشنبه",
@@ -85,5 +87,5 @@ return [
   "popup-profile" => "پروفایل",
   "popup-register" => "ثبت کنید",
   "popup-setting" => "تنظیمات",
-  "sidebar-main" => "منو اصلی"
+  "sidebar-main" => "منو اصلی",
 ];
